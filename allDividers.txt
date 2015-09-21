@@ -7,4 +7,6 @@
   2.1. Проверить, является ли текущее число делителем числа n
   2.2. Если да, то вывести текущее число
 
-Ссылка на PNG-изображение блок схемы: http://hypertricks.ru/xprmnts/homeworks/allDividers/allDividers.png
+Ссылка на PNG-изображение блок схемы:
+
+http://hypertricks.ru/xprmnts/homeworks/allDividers/allDividers.png
