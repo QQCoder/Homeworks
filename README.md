@@ -1,2 +1,2 @@
-# TestRepository
-Repository have not description
+# Homeworks
+Здесь я буду выкладывать домашние работы по информатике
