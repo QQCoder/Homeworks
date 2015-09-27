@@ -9,7 +9,7 @@
 
 read n;
 i := 1;
-(M1) if i <= n {
+M1: if i <= n {
 	if n mod i = 0 {
 		write i;
 	}
