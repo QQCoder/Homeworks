@@ -2,34 +2,42 @@ const
  n = 3;
 
 type
- // добавить пробел после 1..n,
- matrix = array[1..n,1..n] of integer;
+ matrix = array[1..n, 1..n] of integer;
 
-// функции лучше называть read_matrix, переменные тоже с маленькой - паскаль игнорирует капитализацию
-procedure readMatrix(var A: matrix);
-var i, j: integer;
-begin
-// обернуть в нормальные бегин енд здесть и везде
- for i := 1 to n do
-  for j := 1 to n do readln(A[i,j]);
-end;
-
-procedure writeMatrix(var A: matrix);
+procedure read_matrix(var A: matrix);
 var i, j: integer;
 begin
  for i := 1 to n do
  begin
-  for j := 1 to n do write(' ', A[i,j], ' ');
+  for j := 1 to n do
+  begin
+   readln(A[i,j]);
+  end;
+ end;
+end;
+
+procedure write_matrix(var A: matrix);
+var i, j: integer;
+begin
+ for i := 1 to n do
+ begin
+  for j := 1 to n do
+  begin
+   write(' ', A[i,j], ' ');
+  end;
   writeln;
  end;
 end;
 
-procedure writeTranspMatrix(var A: matrix);
+procedure write_transp_matrix(var A: matrix);
 var i, j: integer;
 begin
  for i := 1 to n do
  begin
-  for j := 1 to n do write('|', A[j,i]);
+  for j := 1 to n do
+  begin
+   write('|', A[j,i]);
+  end;
   writeln;
  end;
 end;
