@@ -1,5 +1,5 @@
 const
- n = 3;
+ n = 4;
 
 type
  matrix = array[1..n, 1..n] of integer;
@@ -36,7 +36,7 @@ begin
  begin
   for j := 1 to n do
   begin
-   write('|', A[j,i]);
+   write(' ', A[j,i], ' ');
   end;
   writeln;
  end;
