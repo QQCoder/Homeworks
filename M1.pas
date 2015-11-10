@@ -46,8 +46,8 @@ var
  A: matrix;
 
 begin
- readMatrix(A);
- writeMatrix(A);
+ read_matrix(A);
+ write_matrix(A);
  writeln;
- writeTranspMatrix(A);
+ write_transp_matrix(A);
 end.
