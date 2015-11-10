@@ -2,26 +2,34 @@ const
  n = 3;
 
 type
- matrix = array[1..n,1..n] of integer;
+ matrix = array[1..n, 1..n] of integer;
 
-procedure readMatrix(var A: matrix);
-var i, j: integer;
-begin
- for i := 1 to n do
-  for j := 1 to n do readln(A[i,j]);
-end;
-
-procedure writeMatrix(var A: matrix);
+procedure read_matrix(var A: matrix);
 var i, j: integer;
 begin
  for i := 1 to n do
  begin
-  for j := 1 to n do write(' ', A[i,j], ' ');
+  for j := 1 to n do
+  begin
+   readln(A[i,j]);
+  end;
+ end;
+end;
+
+procedure write_matrix(var A: matrix);
+var i, j: integer;
+begin
+ for i := 1 to n do
+ begin
+  for j := 1 to n do
+  begin
+   write(' ', A[i,j], ' ');
+  end;
   writeln;
  end;
 end;
 
-procedure writeMinInLines(var A: matrix);
+procedure write_min_in_lines(var A: matrix);
 var i, j, min: integer;
 begin
  for i := 1 to n do
@@ -39,8 +47,8 @@ var
  A: matrix;
 
 begin
- readMatrix(A);
- writeMatrix(A);
+ read_matrix(A);
+ write_matrix(A);
  writeln;
- writeMinInLines(A);
+ write_min_in_lines(A);
 end.
