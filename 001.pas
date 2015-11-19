@@ -1,94 +1,56 @@
-program zadachaA1;
-
-procedure readArr(var a: array of integer);
+procedure read_arr(var a: array of integer);
 var
   i, n: integer;
 begin
   setlength(a, 10000000);
   i := 0;
-  while i < 9999999 do
+  while i < 10000000 do
   begin
     a[i] := 1;
     a[i+1] := 2;
     i := i + 2;
   end;
-  a[9999999] := 3;
 end;
 
-function findDivider(num: integer): array of integer;
+function is_per(a: array of integer): array of integer;
 var
-  i, j: integer;
-  n: real;
+ x, j, i, l: integer;
+ arr: array of integer;
 begin
-  setlength(result, num div 2);
-  n := num div 2;
-  i := 2;
-  j := 0;
-  while i <= n do
+ x := 0;
+ j := 0;
+ i := 1;
+ l := length(a);
+ while i < l do
+ begin
+  if a[j] = a[i] then
   begin
-    if num mod i = 0 then 
-    begin
-      result[j] := i;
-      j := j + 1;
-    end;
-    i := i + 1;
-  end;
-  setlength(result, j);
-end;
-
-function isPeriodicity(var sq: array of integer): boolean;
-var
-  i, j, k: integer;
-  divider: array of integer;
-  period: boolean;
-begin
-  divider := findDivider(length(sq));
-  period := true;
-  if (length(divider) >= 1) then
-  begin
-    for i := 0 to length(divider) - 1 do
-    begin
-      period := true;
-      j := 0;
-      while period and (j <> divider[i]) do 
-      begin
-        k := 1;
-        while period and (k <= (length(sq) / divider[i] - 1)) do
-        begin
-          if (sq[j] <> sq[j + (divider[i] * k)]) then 
-          begin
-            period := false;
-          end;
-          k := k + 1;
-        end;
-        j := j + 1;
-      end;
-      if (period = true) then 
-      begin
-        break;
-      end;
-    end;
+   j := j + 1;
+   x := i - j;
   end
   else
   begin
-    period := true;
-    i := 1;
-    while period and (i <= length(sq)-1) do
-    begin
-      if (sq[0] <> sq[i]) then
-      begin
-        period := false;
-      end;
-      i := i + 1;
-    end;
-  end;    
-  result := period;
+   j := 0;
+   x := 0;
+  end;
+  i := i + 1;
+ end;
+ if x = 0 then
+ begin
+  setlength(arr, 0);
+ end
+ else
+ begin
+  setlength(arr, x + 1);
+  for i := 0 to x do arr[i] := a[i];
+ end;
+ result := arr;
 end;
 
 var
-  sq: array of integer;
+  a: array of integer;
 
 begin
-  readArr(sq);
-  write(isPeriodicity(sq));
+  read_arr(a);
+  write(is_per(a));
 end.
