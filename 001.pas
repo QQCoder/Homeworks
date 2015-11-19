@@ -4,12 +4,13 @@ var
 begin
   setlength(a, 10000000);
   i := 0;
-  while i < 10000000 do
+  while i < 9999999 do
   begin
     a[i] := 1;
     a[i+1] := 2;
     i := i + 2;
   end;
+  a[9999999] := 3;
 end;
 
 function is_per(a: array of integer): array of integer;
@@ -25,8 +26,8 @@ begin
  begin
   if a[j] = a[i] then
   begin
-   j := j + 1;
    x := i - j;
+   j := j + 1;
   end
   else
   begin
@@ -41,8 +42,8 @@ begin
  end
  else
  begin
-  setlength(arr, x + 1);
-  for i := 0 to x do arr[i] := a[i];
+  setlength(arr, x);
+  for i := 0 to x - 1 do arr[i] := a[i];
  end;
  result := arr;
 end;
