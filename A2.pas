@@ -12,7 +12,7 @@ begin
  end;
 end;
 
-function is_per(a: array of integer): array of integer;
+function is_per(a: array of integer): boolean;
 var
  x, j, i, l: integer;
  arr: array of integer;
@@ -36,9 +36,8 @@ begin
   end;
   i := i + 1;
  end;
- setlength(arr, x);
- for i := 0 to x - 1 do arr[i] := a[i];
- result := arr;
+ if x = 0 then is_per := false
+ else is_per := true;
 end;
 
 var
