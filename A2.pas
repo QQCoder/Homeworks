@@ -15,7 +15,6 @@ end;
 function is_per(a: array of integer): boolean;
 var
  x, j, i, l: integer;
- arr: array of integer;
 begin
  x := 0;
  j := 0;
