@@ -30,20 +30,14 @@ begin
   end
   else
   begin
+   if j <> 0 then i := i - 1;
    j := 0;
    x := 0;
   end;
   i := i + 1;
  end;
- if x = 0 then
- begin
-  setlength(arr, 0);
- end
- else
- begin
-  setlength(arr, x);
-  for i := 0 to x - 1 do arr[i] := a[i];
- end;
+ setlength(arr, x);
+ for i := 0 to x - 1 do arr[i] := a[i];
  result := arr;
 end;
 
