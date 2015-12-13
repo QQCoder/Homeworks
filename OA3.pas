@@ -1,21 +1,33 @@
 procedure write_diff(a1, a2: array of integer);
 var
- i, j, l1, l2: integer;
- a3: array of integer;
- ok: boolean;
+ i, j: integer;
 begin
- for i := 0 to length(a1) - 1 do
+ j := 0;
+ i := 0;
+ while i < length(a1) do
  begin
-  ok := true;
-  for j := 0 to length(a2) - 1 do
+  if j < length(a2) then
   begin
-   if a1[i] = a2[j] then
+   if a1[i] <> a2[j] then
    begin
-    ok := false;
-    break;
+    if a1[i] < a2[j] then
+    begin
+     write(a1[i], ' ');
+     j := j - 1;
+    end
+    else
+    begin
+     i := i - 1;
+    end;
    end;
+   i := i + 1;
+   j := j + 1;
+  end
+  else
+  begin
+   write(a1[i], ' ');
+   i := i + 1;
   end;
-  if ok then write(a1[i], ' ');
  end;
 end;
 
