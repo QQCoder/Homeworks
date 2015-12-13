@@ -36,6 +36,5 @@ begin
  read_array(a);
  writeln(a);
  inclusion_sort(a);
- inclusion_sort(a);
  writeln(a);
 end.
