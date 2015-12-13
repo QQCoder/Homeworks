@@ -1,20 +1,20 @@
 function d_srch(var a: array of integer; n: integer): integer;
 var
- i, lt, rt: integer;
+ i, a1, a2: integer;
  s: boolean;
 begin
- lt := 1;
- rt := length(a);
+ a1 := 1;
+ a2 := length(a);
  while not s do
  begin
-  i := (lt + rt) div 2;
+  i := (a1 + a2) div 2;
   if (a[i] < n) then
   begin
-   lt := i + 1;
+   a1 := i + 1;
   end
   else if (a[i] > n) then
   begin
-   rt := i - 1;
+   a2 := i - 1;
   end
   else
   begin
