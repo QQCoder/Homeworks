@@ -8,7 +8,12 @@ begin
  while not s do
  begin
   i := (a1 + a2) div 2;
-  if (a[i] < n) then
+  if abs(a1 - a2) <= 1 then
+  begin
+   d_srch := -1;
+   s := true;
+  end
+  else if (a[i] < n) then
   begin
    a1 := i + 1;
   end
