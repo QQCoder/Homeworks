@@ -23,6 +23,10 @@ begin
   end
   else
   begin
+   if a1[i] > a2[j] then
+   begin
+    break;
+   end;
    j := 0;
   end;
  end;
