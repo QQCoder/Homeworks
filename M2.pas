@@ -64,13 +64,12 @@ begin
   end;
   for j := 1 to n do
   begin
-   if a[i, j] > n then
+   if (a[i, j] > n) and (a[i, j] < 1) then
    begin
     yes := false;
     break;
    end;
   end;
-  if not yes then break;
  end;
  is_magic := yes;
 end;
