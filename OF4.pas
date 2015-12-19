@@ -47,22 +47,20 @@ begin
   i := 0;
   j := 0;
   k := 0;
-  while i < l1 do
+  while (i < l1) and (j < l2) do
   begin
    if a1[i] < a2[j] then
    begin
-    a3[k] := a1[i];
     i := i + 1;
-    k := k + 1;
    end
    else if a1[i] > a2[j] then
    begin
-    if j < l2 then j := j + 1;
-    k := k + 1;
+    j := j + 1;
    end
    else
    begin
-    if j < l2 then j := j + 1;
+    a3[k] := a1[i];
+    j := j + 1;
     i := i + 1;
     k := k + 1;
    end;
