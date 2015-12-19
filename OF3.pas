@@ -58,11 +58,13 @@ begin
    else if a1[i] > a2[j] then
    begin
     if j < l2 then j := j + 1;
+    k := k + 1;
    end
    else
    begin
     if j < l2 then j := j + 1;
     i := i + 1;
+    k := k + 1;
    end;
   end;
   close(f1);
@@ -70,10 +72,12 @@ begin
   assign(f3, s3);
   rewrite(f3);
   write(f3, a3[0]);
+  writeln(a3[0]);
   for i := 1 to l1 - 1 do
   begin
    if a3[i] > a3[i - 1] then
    begin
+    writeln(a3[i]);
     write(f3, ' ', a3[i]);
    end;
   end;
