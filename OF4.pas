@@ -47,22 +47,22 @@ begin
   i := 0;
   j := 0;
   k := 0;
-  while i < l1 do
+  while (i < l1) and (j < l2) do
   begin
    if a1[i] < a2[j] then
    begin
-    a3[k] := a1[i];
     i := i + 1;
-    k := k + 1;
    end
    else if a1[i] > a2[j] then
    begin
-    if j < l2 then j := j + 1;
+    j := j + 1;
    end
    else
    begin
-    if j < l2 then j := j + 1;
+    a3[k] := a1[i];
+    j := j + 1;
     i := i + 1;
+    k := k + 1;
    end;
   end;
   close(f1);
@@ -85,5 +85,5 @@ var
   f1, f2, f3: text;
 
 begin
- diff(f1, f2, f3, 'of3_1.txt', 'of3_2.txt', 'of3_out.txt');
+ diff(f1, f2, f3, 'of4_1.txt', 'of4_2.txt', 'of4_out.txt');
 end.
