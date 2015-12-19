@@ -84,12 +84,10 @@ begin
   assign(f3, s3);
   rewrite(f3);
   write(f3, a3[0]);
-  writeln(a3[0]);
   for i := 1 to l1 + l2 - 1 do
   begin
    if a3[i] > a3[i - 1] then
    begin
-    writeln(a3[i]);
     write(f3, ' ', a3[i]);
    end;
   end;
