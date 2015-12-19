@@ -73,8 +73,8 @@ begin
   begin
    a3[k] := a1[i];
    k := k + 1;
- end;
- for j := j to l2 - 1 do
+  end;
+  for j := j to l2 - 1 do
   begin
    a3[k] := a2[j];
    k := k + 1;
