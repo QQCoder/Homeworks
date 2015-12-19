@@ -40,7 +40,7 @@ begin
  end;
  if error then
  begin
-  writeln('One of files is not ordered!');
+  writeln('All input files must be ordered!');
  end
  else
  begin
