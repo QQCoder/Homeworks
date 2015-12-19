@@ -1,4 +1,4 @@
-procedure diff(f1, f2: text; var f3: text; s1, s2, s3: string);
+procedure inter(f1, f2: text; var f3: text; s1, s2, s3: string);
 var
  a1, a2, a3: array of integer;
  c, k, l1, l2, i, j: integer;
@@ -87,5 +87,5 @@ var
   f1, f2, f3: text;
 
 begin
- diff(f1, f2, f3, 'of3_1.txt', 'of3_2.txt', 'of3_out.txt');
+ inter(f1, f2, f3, 'of4_1.txt', 'of4_2.txt', 'of4_out.txt');
 end.
