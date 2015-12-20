@@ -1,11 +1,10 @@
-const
- n = 100;
-
 var
- arr: array[2..n] of boolean;
- i, j, p, a: integer;
+ arr: array of boolean;
+ i, j, p, a, n: integer;
 
 begin
+ readln(n);
+ setlength(arr, n + 1);
  for i:=2 to n do arr[i]:=true;
 
  i:=2;
@@ -23,5 +22,5 @@ begin
   i:=i+1;
  end;
 
- for i:=2 to n do if arr[i] = true then write(i, ',');
+ for i:=2 to n do if arr[i] = true then write(i, ' ');
 end.
