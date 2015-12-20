@@ -1,3 +1,4 @@
+
 function is_digit(chr: char): boolean;
 begin
  result := ('0' <= chr) and (chr <= '9');
@@ -55,6 +56,7 @@ begin
    s := '';
   end;
  end;
+ sum := sum + str_to_num(s);
  get_sum := sum;
 end;
 
@@ -63,6 +65,6 @@ var
  s: integer;
 
 begin
- s := get_sum(f, 'numbers.txt');
+ s := get_sum(f, 'test/F2-in.txt');
  writeln(s);
 end.

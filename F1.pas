@@ -43,7 +43,7 @@ var
  s: string;
 
 begin
- s := get_longest_word(f, 'text.txt');
+ s := get_longest_word(f, 'test/F1-in.txt');
  l := length(s);
  writeln('Longest word is "', s, '". Length: ', l);
 end.
