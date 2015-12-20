@@ -1,0 +1,15 @@
+Ivanov Ivan
+100
+90
+86
+false
+Petrov Petr
+90
+40
+40
+true
+Sidorov Sidor
+40
+40
+89
+false

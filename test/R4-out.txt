@@ -1,0 +1,7 @@
+Ivanov Ivan
+100, 90, 86
+False
+
+Petrov Petr
+90, 40, 40
+True
