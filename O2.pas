@@ -1,22 +1,28 @@
 procedure search_max_sort(var a: array of integer);
 var
   i, j, b, max, l, ind: integer;
+  y: boolean;
 begin
  l := length(a) - 1;
  for i := l downto 1 do
  begin
   max := a[i];
-  for j := i - 1 downto 0 do
+  for j := i - 2 downto 0 do
   begin
    if (max < a[j]) then
    begin
     max := a[j];
     ind := j;
+    y := true;
    end;
   end;
-  b := a[ind];
-  a[ind] := a[i];
-  a[i] := b;
+  if y then
+  begin
+   b := a[ind];
+   a[ind] := a[i];
+   a[i] := b;
+  end;
+  y := false;
  end;
 end;
 
